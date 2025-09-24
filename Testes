@@ -1,0 +1,55 @@
+import { describe, it, expect } from "vitest";
+import { analyzeDiagnostics } from "../src/lib/diagnostics";
+import { SensorData } from "../src/hooks/useBluetooth";
+
+describe("Diagnostics Module", () => {
+  it("should return high alert for low battery", () => {
+    const data: SensorData = {
+      rpm: 3000,
+      batteryVoltage: 11.5,
+      fuelPressure: 35,
+      engineTemp: 90,
+      errorCodes: [],
+      timestamp: Date.now(),
+    };
+
+    const alerts = analyzeDiagnostics(data);
+    expect(alerts).toContainEqual({
+      code: "BATT_LOW",
+      message: "Bateria fraca",
+      level: "high",
+    });
+  });
+
+  it("should return high alert for engine overheating", () => {
+    const data: SensorData = {
+      rpm: 3000,
+      batteryVoltage: 12.5,
+      fuelPressure: 35,
+      engineTemp: 110,
+      errorCodes: [],
+      timestamp: Date.now(),
+    };
+
+    const alerts = analyzeDiagnostics(data);
+    expect(alerts).toContainEqual({
+      code: "ENG_OVERHEAT",
+      message: "Motor superaquecendo",
+      level: "high",
+    });
+  });
+
+  it("should return empty alerts for normal data", () => {
+    const data: SensorData = {
+      rpm: 3000,
+      batteryVoltage: 12.8,
+      fuelPressure: 35,
+      engineTemp: 90,
+      errorCodes: [],
+      timestamp: Date.now(),
+    };
+
+    const alerts = analyzeDiagnostics(data);
+    expect(alerts.length).toBe(0);
+  });
+});
