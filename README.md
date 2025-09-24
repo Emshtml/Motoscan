@@ -7,12 +7,4 @@ Oferece escaneamento em tempo real, leitura de códigos de erro da ECU, históri
  Tecnologias
 - React + TypeScript + Vite
 - TailwindCSS + Framer Motion + shadcn/ui
-- Testes: Jest + React Testing Library
-
- Instalação
-```bash
-git clone https://github.com/SEU-USUARIO/motoscan-ai.git
-cd motoscan-ai
-npm install
-npm run dev
-```
+- Testes: Jest + React Testing Librar
