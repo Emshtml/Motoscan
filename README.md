@@ -1,44 +1,38 @@
-MotoScan AI
+# Motoscan
 
-![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![React](https://img.shields.io/badge/React-18.2.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.2-green)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+## 🚀 Descrição
 
- Descrição do Projeto
+O Motoscan é um aplicativo de diagnóstico inteligente para motos Yamaha, desenvolvido com **React, TypeScript e Vite.  
+Permite monitorar sensores em tempo real, gerar alertas críticos, visualizar histórico de falhas e produzir relatórios detalhados.
 
-MotoScan AI é uma solução web/mobile de diagnóstico inteligente para motocicletas Yamaha, projetada para fornecer informações técnicas precisas, monitoramento em tempo real e alertas automáticos de falhas críticas. O objetivo é otimizar a manutenção preventiva, garantir segurança e melhorar a performance da moto.
+O projeto simula a conexão Bluetooth com a moto e fornece dados como:
 
-O sistema utiliza uma interface intuitiva e dashboards dinâmicos para apresentar os dados do veículo, permitindo que mecânicos e motociclistas tomem decisões rápidas e embasadas.
+- RPM do motor
+- Tensão da bateria
+- Pressão de combustível
+- Temperatura do motor
+- Códigos de erro da ECU
 
- Funcionalidades Principais
+O Dashboard exibe gráficos em tempo real, permitindo acompanhamento visual dos parâmetros da moto.
 
-- Monitoramento em tempo real:
-  Exibe tensão da bateria, RPM do motor, pressão da bomba de combustível, carga do estator e outros parâmetros essenciais.
+ Funcionalidades
 
-- Leitura de códigos de erro da ECU: 
-  Detecta falhas elétricas e mecânicas, identifica componentes críticos e sugere ações corretivas.
-
-- Alertas e notificações inteligentes:
-  Notifica imediatamente quando algum parâmetro está fora do limite seguro, prevenindo falhas graves.
-
-- Histórico de falhas e relatórios técnicos:  
-  Mantém registros detalhados de eventos e falhas, com possibilidade de exportar relatórios técnicos.
-
-- Dashboard interativo e intuitivo:
-  Visualização clara e responsiva de todos os dados da moto com gráficos e indicadores de status.
-
-- Arquitetura modular e expansível:
-  Estrutura organizada em componentes reutilizáveis, hooks customizados e biblioteca de diagnósticos, facilitando futuras atualizações.
-
+- Conexão Bluetooth simulada com a moto  
+- Monitoramento de sensores em tempo real  
+- Histórico de falhas com timestamp  
+- Alertas críticos e classificação por severidade  
+- Dashboard com gráficos de evolução de RPM e bateria  
+- Exportação de relatórios em PDF ou CSV (prévia)  
+- Navegação simples entre páginas: Dashboard, Scanner, Histórico e Relatórios
  Tecnologias Utilizadas
-
-- Frontend:** React + TypeScript + Vite  
-- UI/UX:** TailwindCSS + shadcn/ui + Framer Motion  
-- Conexão: Web Bluetooth API / Simulação OBD-II  
-- Testes:Jest + React Testing Library  
-   Estrutura do Projeto
+TypeScript: tipagem estática, segurança e escalabilidade  
+  React: construção de componentes e navegação SPA  
+  Vite: bundler moderno e rápido para desenvolvimento  
+  Tailwind CSS: estilização responsiva e modular  
+ Chart.js + react-chartjs-2: gráficos em tempo real  
+ Jest + React Testing Library: testes unitários e integração  
+  GitHub Actions: integração contínua (CI/CD)
 
 
