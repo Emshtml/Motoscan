@@ -1,8 +1,8 @@
-# Motoscan
+Motoscan
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 🚀 Descrição
+ Descrição
 
 O Motoscan é um aplicativo de diagnóstico inteligente para motos Yamaha, desenvolvido com **React, TypeScript e Vite.  
 Permite monitorar sensores em tempo real, gerar alertas críticos, visualizar histórico de falhas e produzir relatórios detalhados.
