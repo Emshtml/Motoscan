@@ -1,21 +1,28 @@
 
-{
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM","DOM.Iterable","ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "target": "ESNext",                          // Suporte a recursos modernos do JS
+    "useDefineForClassFields": true,            // Recomendada para classes modernas
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],   // Libs usadas no projeto
+    "allowJs": false,                            // Não permite arquivos JS soltos
+    "skipLibCheck": true,                        // Evita checagem de libs externas
+    "esModuleInterop": true,                     // Import compatível com CommonJS
+    "allowSyntheticDefaultImports": true,        // Permite import default
+    "strict": true,                              // Habilita checagem estrita
+    "forceConsistentCasingInFileNames": true,   // Evita problemas de case
+    "module": "ESNext",                          // Module moderno para Vite
+    "moduleResolution": "Node",                  // Resoluciona imports como Node
+    "resolveJsonModule": true,                   // Permite importar JSON
+    "isolatedModules": true,                     // Recomendado para Vite + React
+    "noEmit": true,                              // Não gera JS, apenas checa TS
+    "jsx": "react-jsx",                          // JSX moderno do React 18
+    "strictNullChecks": true,                    // Garante verificação de null/undefined
+    "noUnusedLocals": true,                      // Ajuda a evitar variáveis não usadas
+    "noUnusedParameters": true,                  // Evita parâmetros não utilizados
+    "noFallthroughCasesInSwitch": true,         // Evita "fallthrough" em switch
+    "types": ["vite/client"]                     // Tipos específicos do Vite
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
+
+    
