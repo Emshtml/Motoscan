@@ -1,0 +1,44 @@
+// exemplo simples usando react-native-ble-plx (biblioteca BLE)
+import { BleManager, Device } from 'react-native-ble-plx';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Button } from 'react-native';
+
+const bleManager = new BleManager();
+
+export default function Dashboard() {
+  const [device, setDevice] = useState<Device | null>(null);
+  const [rpm, setRpm] = useState<number>(0);
+
+  const scanAndConnect = () => {
+    bleManager.startDeviceScan(null, null, (error, dev) => {
+      if (error) {
+        console.error("Scan error:", error);
+        return;
+      }
+      if (dev && dev.name?.includes("NomeDoSeuDispositivo")) {
+        bleManager.stopDeviceScan();
+        dev.connect()
+          .then(d => {
+            setDevice(d);
+            return d.discoverAllServicesAndCharacteristics();
+          })
+          .then(d => {
+            // Suponha que o serviço/characteristic de rpm é conhecido
+            return d.readCharacteristicForService("UUID_SERV", "UUID_CHAR_RPM");
+          })
+          .then(char => {
+            const val = parseInt(char.value || "0", 10);
+            setRpm(val);
+          })
+          .catch(err => console.error("Conn error:", err));
+      }
+    });
+  };
+
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>RPM: {rpm}</Text>
+      <Button title="Conectar / Scan" onPress={scanAndConnect} />
+    </View>
+  );
+}
