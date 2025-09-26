@@ -1,0 +1,24 @@
+App Motoscan Mobile
+├─ UI / Frontend (React Native)
+│   ├─ Navegação: React Navigation
+│   ├─ Componentes: TailwindRN ou NativeBase
+│   └─ Hooks para consumo de dados BLE
+├─ Módulo BLE / ECU
+│   ├─ Scan / Emparelhamento
+│   ├─ Leitura de sensores em tempo real
+│   ├─ Reconexão automática
+│   └─ Conversão de dados para display
+├─ Estado / Persistência
+│   ├─ Zustand / Redux
+│   ├─ Realm / SQLite para histórico local
+│   └─ AsyncStorage para preferências
+├─ Backend (opcional)
+│   ├─ Node.js + Express / NestJS
+│   ├─ MongoDB / PostgreSQL
+│   └─ API REST ou GraphQL
+├─ Notificações
+│   ├─ Push (Firebase / OneSignal)
+│   └─ Alarmes locais
+└─ Segurança
+    ├─ Login / JWT
+    └─ Criptografia de dados sensíveis
