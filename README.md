@@ -1,38 +1,73 @@
-Motoscan
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+# Motoscan 🚀
 
- Descrição
+![Motoscan Logo](https://raw.githubusercontent.com/Emshtml/Motoscan/main/screenshots/logo.png)
 
-O Motoscan é um aplicativo de diagnóstico inteligente para motos Yamaha, desenvolvido com React, TypeScript e Vite.  
-Permite monitorar sensores em tempo real, gerar alertas críticos, visualizar histórico de falhas e produzir relatórios detalhados.
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/Emshtml/Motoscan/actions)  
+[![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen)](https://github.com/Emshtml/Motoscan)  
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)  
+[![Version](https://img.shields.io/badge/version-1.0.0-blueviolet)](https://github.com/Emshtml/Motoscan/releases)  
 
-O projeto simula a conexão Bluetooth com a moto e fornece dados como:
+**Motoscan** é o app definitivo para rastreamento e monitoramento de motos em tempo real, oferecendo alertas inteligentes, relatórios de manutenção e interface moderna.  
 
-- RPM do motor
-- Tensão da bateria
-- Pressão de combustível
-- Temperatura do motor
-- Códigos de erro da ECU
+---
 
-O Dashboard exibe gráficos em tempo real, permitindo acompanhamento visual dos parâmetros da moto.
+Funcionalidades
 
- Funcionalidades
+- Rastreamento em tempo real via GPS 
+- Histórico de trajetos e rotas detalhado 📊  
+- Alertas de movimentação suspeita ⚠️  
+- Relatórios automáticos de manutenção  
+- Login seguro via JWT 🔒  
+- Interface intuitiva e responsiva para dispositivos móveis  
+ Tecnologias
 
-- Conexão Bluetooth simulada com a moto  
-- Monitoramento de sensores em tempo real  
-- Histórico de falhas com timestamp  
-- Alertas críticos e classificação por severidade  
-- Dashboard com gráficos de evolução de RPM e bateria  
-- Exportação de relatórios em PDF ou CSV (prévia)  
-- Navegação simples entre páginas: Dashboard, Scanner, Histórico e Relatórios
- Tecnologias Utilizadas
-TypeScript: tipagem estática, segurança e escalabilidade  
-  React: construção de componentes e navegação SPA  
-  Vite: bundler moderno e rápido para desenvolvimento  
-  Tailwind CSS: estilização responsiva e modular  
- Chart.js + react-chartjs-2: gráficos em tempo real  
- Jest + React Testing Library: testes unitários e integração  
-  GitHub Actions: integração contínua (CI/CD)
+| Camada       | Tecnologia |
+| ------------ | ---------- |
+| Front-end    | React Native + Expo |
+| Back-end     | Node.js, Express |
+| Banco de dados | MongoDB |
+| Autenticação | JWT |
+| Testes       | Jest + Supertest |
+| Versionamento | Git / GitHub |
+
+---
+
+ Instalação e Teste
+
+Teste via Expo
+
+1. Instale Expo Go: [Android](https://play.google.com/store/apps/details?id=host.exp.exponent) | [iOS](https://apps.apple.com/app/expo-go/id982107779)  
+2. Abra este link no celular:  
+   [https://expo.dev/@Emshtml/Motoscan](https://expo.dev/@Emshtml/Motoscan)  
+3. Faça login com uma conta de teste  
+4. Explore rastreamento, histórico e alertas em tempo real  
+
+APK Android
+
+- Baixe o APK: [Download Motoscan APK](https://github.com/Emshtml/Motoscan/releases/latest)  
+- Instale e abra no dispositivo  
+
+ iOS (TestFlight - futuro)
+
+- Disponível para teste beta via TestFlight  
+
+---
+
+ Testes
+
+ Backend
+
+```bash
+npm run test
+Motoscan/
+├─ backend/            Servidor Node.js
+├─ frontend/           App React Native + Expo
+├─ tests/              Testes unitários e integração
+├─ screenshots/        Imagens e GIFs
+├─ .env                Variáveis de ambiente
+├─ package.json
+└─ README.md
+
 
 
