@@ -1,5 +1,5 @@
 
-# Motoscan 🚀
+ Motoscan 
 
 ![Motoscan Logo](https://raw.githubusercontent.com/Emshtml/Motoscan/main/screenshots/logo.png)
 
