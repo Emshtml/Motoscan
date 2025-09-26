@@ -1,30 +1,18 @@
-motoscan-ai/
-├── README.md           # Descrição do projeto, badges, instalação
-├── LICENSE             # Licença MIT
-├── package.json        # Dependências e scripts
-├── tsconfig.json       # Configuração TypeScript
-├── public/
-│   ├── index.html      # HTML base
-│   └── logo.png        # Logo do projeto
-├── src/
-│   ├── App.tsx         # Componente principal
-│   ├── index.tsx       # Entry point React
-│   ├── assets/
-│   │   └── icons/      # Ícones do dashboard e scanner
-│   ├── components/
-│   │   ├── ui/         # Botão, Card, Input
-│   │   └── charts/     # Gráficos em tempo real
-│   ├── pages/
-│   │   ├── Dashboard.tsx
-│   │   ├── Scanner.tsx
-│   │   ├── History.tsx
-│   │   └── Reports.tsx
-│   ├── hooks/
-│   │   └── useBluetooth.ts
-│   ├── lib/
-│   │   └── diagnostics.ts
-│   └── styles/
-│       └── globals.css
-└── tests/
-    ├── diagnostics.test.ts
-    └── ui.test.tsx
+Estrutura do Projeto Motoscan
+motoscan/
+├─ public/
+│ └─ index.html
+├─ src/
+│ ├─ main.tsx # Ponto de entrada do app
+│ ├─ App.tsx # Rotas e navegação
+│ ├─ i18n/ # Traduções PT/EN
+│ ├─ components/ # Componentes reutilizáveis
+│ ├─ pages/ # Páginas (Home, History, NotFound)
+│ ├─ services/ # Serviços (ex: bluetooth)
+│ ├─ hooks/ # Hooks customizados
+│ └─ styles/ # Estilos Tailwind
+├─ tests/ # Testes automatizados
+├─ vite.config.ts # Config Vite
+├─ tailwind.config.cjs # Config Tailwind
+├─ tsconfig.json # Config TypeScript
+
