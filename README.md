@@ -15,10 +15,10 @@
 Funcionalidades
 
 - Rastreamento em tempo real via GPS 
-- Histórico de trajetos e rotas detalhado 📊  
-- Alertas de movimentação suspeita ⚠️  
+- Histórico de trajetos e rotas detalhado  
+- Alertas de movimentação suspeita   
 - Relatórios automáticos de manutenção  
-- Login seguro via JWT 🔒  
+- Login seguro via JWT  
 - Interface intuitiva e responsiva para dispositivos móveis  
  Tecnologias
 
